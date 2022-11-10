@@ -13,7 +13,7 @@ const UserSchema = new Schema ({
         required: 'Please provide an email',
         trim: true,
         lowercase: true,
-        match: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+        match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, 'Please provide a valid email']
     },
     thoughts: [
         {
@@ -22,6 +22,7 @@ const UserSchema = new Schema ({
         }
     ],
     // Check about self-referencing
+    // validate: [(newText) => newText.length <= 280]
     friends: [
         {
             type: Schema.Types.ObjectId,
@@ -43,4 +44,4 @@ UserSchema.virtual('friendCount').get(function() {
 
 const User = model('User', UserSchema)
 
-module.exports = User 
+module.exports = User
