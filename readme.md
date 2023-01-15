@@ -8,7 +8,7 @@ Youniverse is a REST API built using NoSQL for any business to use for their soc
 
 ### User Story
 
-As a front-end developer looking for a back-end for my social media website, I would like an application that allows me to interact with other users on my platform, as well as create my own network of users. When I run the application, I am then able to add, read, edit, or delete data from the database.
+As a front-end developer looking for a backend for my social media website, I would like an application that allows me to interact with other users on my platform, as well as create my own network of users. When I run the application, I am then able to add, read, edit, or delete data from the database.
 
 ### Features
 
